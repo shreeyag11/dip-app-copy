@@ -1,34 +1,23 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from './views/Home.vue';
-import ViewerPage from './views/ViewerPage.vue';
-import Ass1 from './views/Ass1.vue';
+import Home from './components/views/Home.vue';
+import Viewer from './components/views/Viewer.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home,
+    path: '/Home',
+    components: Home
   },
   {
-    path: '/viewer',
-    name: 'Viewer',
-    component: ViewerPage,
-  },
-  {
-    path: '/ass_1',
-    name: 'Assignment 1',
-    component: Ass1,
-  },
-];
+    path: '/Viewer',
+    components: Viewer 
+  }
+]
 
-/* eslint-disable */
 const router = new VueRouter({
-  base: __webpack_public_path__,
-  routes,
-});
-/* eslint-enable */
+  routes
+})
 
 export default router;

@@ -1,27 +1,31 @@
 <template>
-  <b-navbar shadow>
-    <template slot="start">
-      <b-navbar-item
-        tag="router-link"
-        :to="{ path: '/' }"
-      >
-        Home
-      </b-navbar-item>
-      <b-navbar-item
-        tag="router-link"
-        :to="{ path: '/Viewer' }"
-      >
-        Viewer
-      </b-navbar-item>
-    </template>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <a
+      role="button"
+      class="navbar-burger burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navbarBasicExample"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
 
-    <template slot="end">
-      <b-navbar-item
-        href="https://unccdis.zulipchat.com/"
-        target="_blank"
-      >
-        <img src="img/zulip_logo.png">
-      </b-navbar-item>
-    </template>
-  </b-navbar>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          <router-link to="/Home">Home</router-link>
+        </a>
+
+        <a class="navbar-item">
+          <router-link to="/Viewer">Viewer</router-link>
+        </a>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item"></div>
+      </div>
+    </div>
+  </nav>
 </template>
