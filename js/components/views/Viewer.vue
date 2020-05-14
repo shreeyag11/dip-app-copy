@@ -1,22 +1,24 @@
 <template>
-  <div class="upload">
+  <section class="section">
+    <Log />
     <FilePicker />
-  </div>
+  </section>
 </template>
 
 <script>
 import FilePicker from "../Viewer/FilePicker.vue";
+import Log from "../Viewer/Log.vue";
 
 export default {
   components: {
-    FilePicker
+    FilePicker,
+    Log
   }
 };
 </script>
 
 <style scoped>
-.upload {
-  width: 100%;
-  display: block;
+.section {
+  padding: 0rem 0rem 0rem 0rem;
 }
 </style>
