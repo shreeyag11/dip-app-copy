@@ -30,22 +30,20 @@
             }
         },
         methods: {
-            parseFile: function () {
+            parseFile() {
                 var reader = new FileReader();
                 reader.readAsText(this.dropFiles);  
-                reader.onerror = function(event) {
-                    console.error("File could not be read! Code " + event.target.error.code);
-                }; 
-                reader.onload = function(event) {
-                var contents = event.target.result.trim();
-                try{
-                    const header = this._vm.lib.parse_header_json(text);
-                    header.pixels = new Uint8ClampedArray(this._vm.lib.parse_pixels);
-                    console.log("header:",header)
-                }catch(error){
-                    console.log(error);
+                reader.onerror = (error) => console.log(error);
+                reader.onload = (event) => {
+                const text = event.target.result.trim();
+                try {
+                    const header = this.lib.parse_header_json(text);
+                    header.pixels = new Uint8ClampedArray(this.lib.parse_pixels_json(text));
+                    header.name = this.dropFiles.name;
+                    this.$store.commit('ADD_FILE',header);
+                } catch (errors) {
+                    this.$store.commit('ADD_FILE_PARSE_ERRORS',errors);
                 }
-                // this.$store.commit('ADD_FILE', this.dropFiles);
                 };
                 
             }

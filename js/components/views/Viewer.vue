@@ -12,7 +12,7 @@ import Log from "../Viewer/Log.vue";
 export default {
   components: {
     FilePicker,
-    Log
+    Log,
   }
 };
 </script>
