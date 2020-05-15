@@ -5,6 +5,7 @@
   </div>
 </template>
 
+
 <script>
 import NavBar from "./components/NavBar.vue";
 
@@ -13,6 +14,9 @@ export default {
     NavBar
   }
 };
+
+//TODO: Drag and drop for the whole page
+//TODO: zulip logo
 </script>
 
 <style lang="scss">

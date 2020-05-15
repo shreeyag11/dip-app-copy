@@ -42,8 +42,7 @@
                     header.name = this.dropFiles.name;
                     this.$store.commit('ADD_FILE',header);
                 } catch (errors) {
-                    console.log(errors);
-                    this.$store.commit('ADD_FILE_PARSE_ERRORS',errors.split('#!@'));
+                    this.$store.commit('ADD_FILE_PARSE_ERRORS',errors);
                 }
                 };
                 

@@ -1,5 +1,5 @@
 <template>
-    <div v-if="this.$store.state.fileParseSucces" 
+    <div v-if="this.$store.state.fileParseSuccessful" 
     class="notification is-primary noti">
         Sucessfully read {{ this.$store.state.file.name }}
     </div>
