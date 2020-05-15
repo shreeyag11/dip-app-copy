@@ -16,10 +16,9 @@ export default new Vuex.Store({
             state.fileParseErrors = undefined;
             state.file = file;
         },
-        ADD_FILE_PARSE_ERRORS: (state, file) => {
-            console.log("Are there any errors?")
+        ADD_FILE_PARSE_ERRORS: (state, err) => {
             state.fileParseSucces = false;
-            state.fileParseErrors = undefined;
+            state.fileParseErrors = err;
             state.file = undefined;
         }
     }

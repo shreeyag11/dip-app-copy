@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <article
-      id="logContainer"
+      id="logContainer is-danger"
     >
       <div
         id="hint"
@@ -9,10 +9,15 @@
       >
         <p>Log</p>
       </div>
+    
       <div
         id="errorLog"
         class="message-body"
+        v-if="this.$store.state.fileParseErrors"
       >
+        <p v-for="err in this.$store.state.fileParseErrors" :key="err">
+          {{ err }}      
+        </p>
        
       </div>
     </article>
