@@ -1,9 +1,13 @@
 <template>
+<<<<<<< HEAD
   <section class="section is-full"
     @drop="dropHandler"
     @dragover="dragOverHandler"
     >
     <ImageViewer />
+=======
+  <section class="section">
+>>>>>>> parent of e80a4a2... ImageViewer done
     <Log />
     <FilePicker />
   </section>
@@ -12,12 +16,12 @@
 <script>
 import FilePicker from "../Viewer/FilePicker.vue";
 import Log from "../Viewer/Log.vue";
-import ImageViewer from "../Viewer/ImageViewer.vue";
 
 export default {
   components: {
     FilePicker,
     Log,
+<<<<<<< HEAD
     ImageViewer,
   },
   methods: {
@@ -50,6 +54,8 @@ export default {
       // Prevent default behavior (Prevent file from being opened)
       ev.preventDefault();
     },
+=======
+>>>>>>> parent of e80a4a2... ImageViewer done
   }
 };
 </script>

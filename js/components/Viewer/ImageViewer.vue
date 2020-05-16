@@ -1,11 +1,6 @@
 <template>
-    <div class="viewerDiv has-text-centered">
-        <div id="viewerDiv"></div>
-    </div>
-</template>
-
-<script>
     
+<<<<<<< HEAD
 export default {
     data: () => ({
         
@@ -56,3 +51,6 @@ export default {
     padding-top: 3 rem;
 }
 </style>
+=======
+</template>
+>>>>>>> parent of e80a4a2... ImageViewer done

@@ -31,7 +31,26 @@
         },
         methods: {
             parseFile() {
+<<<<<<< HEAD
                this.$store.dispatch('PARSE_FILE',this.dropFiles);
+=======
+                var reader = new FileReader();
+                reader.readAsText(this.dropFiles);  
+                reader.onerror = (error) => console.log(error);
+                reader.onload = (event) => {
+                const text = event.target.result.trim();
+                try {
+                    const header = this.lib.parse_header_json(text);
+                    header.pixels = new Uint8ClampedArray(this.lib.parse_pixels_json(text));
+                    header.name = this.dropFiles.name;
+                    this.$store.commit('ADD_FILE',header);
+                } catch (errors) {
+                    console.log(errors);
+                    this.$store.commit('ADD_FILE_PARSE_ERRORS',errors.split('#!@'));
+                }
+                };
+                
+>>>>>>> parent of e80a4a2... ImageViewer done
             }
         }
     }
