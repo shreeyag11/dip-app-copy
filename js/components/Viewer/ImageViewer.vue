@@ -7,7 +7,9 @@
 <script>
     
 export default {
-    data: () => ({}),
+    data: () => ({
+        
+    }),
     computed: {
         fileParseSuccessful() {
             return this.$store.state.fileParseSuccessful;

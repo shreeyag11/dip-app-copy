@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     <NavBar />
     <router-view />
   </div>
@@ -16,7 +16,6 @@ export default {
 };
 
 //TODO: Drag and drop for the whole page
-//TODO: zulip logo
 </script>
 
 <style lang="scss">
@@ -25,5 +24,17 @@ export default {
 
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
+
+#app {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
 </style>
 

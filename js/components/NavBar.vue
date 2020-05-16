@@ -8,7 +8,12 @@
       </template>
 
       <template slot="end">
-        <b-navbar-item tag="div"></b-navbar-item>
+        <b-navbar-item 
+          href="https://unccdis.zulipchat.com/"
+          target="_blank"
+        >
+          <img src="img/zulip_logo.png">
+        </b-navbar-item>
       </template>
     </b-navbar>
   </div>
