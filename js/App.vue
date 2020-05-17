@@ -13,11 +13,8 @@ export default {
     NavBar
   }
 };
-<<<<<<< HEAD
 
 //TODO: Drag and drop for the whole page
-=======
->>>>>>> parent of e80a4a2... ImageViewer done
 </script>
 
 <style lang="scss">

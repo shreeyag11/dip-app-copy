@@ -1,6 +1,10 @@
 <template>
+    <div class="viewerDiv has-text-centered">
+        <div id="viewerDiv"></div>
+    </div>
+</template>
     
-<<<<<<< HEAD
+<script>
 export default {
     data: () => ({
         
@@ -24,7 +28,7 @@ export default {
     },
     methods: {
         fileChanged(newVal) {
-            var viewerDiv = document.getElementById('viewerDiv');
+            const viewerDiv = document.getElementById('viewerDiv');
             if(viewerDiv.lastElementChild){
                 viewerDiv.removeChild(viewerDiv.lastElementChild);
             }
@@ -42,15 +46,13 @@ export default {
             viewerDiv.appendChild(canvas);
         }
     }
-  
+
 }
 </script>
+      
 
 <style scoped>
 .viewerDiv {
     padding-top: 3 rem;
 }
 </style>
-=======
-</template>
->>>>>>> parent of e80a4a2... ImageViewer done

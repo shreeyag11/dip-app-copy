@@ -31,9 +31,6 @@
         },
         methods: {
             parseFile() {
-<<<<<<< HEAD
-               this.$store.dispatch('PARSE_FILE',this.dropFiles);
-=======
                 var reader = new FileReader();
                 reader.readAsText(this.dropFiles);  
                 reader.onerror = (error) => console.log(error);
@@ -50,7 +47,6 @@
                 }
                 };
                 
->>>>>>> parent of e80a4a2... ImageViewer done
             }
         }
     }
